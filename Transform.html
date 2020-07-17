@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform</title>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@1,300&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: black;
+            padding: 0px;
+            margin: 0px;
+            font-family: 'Ubuntu', sans-serif;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            height: 800px;
+            width: vw;
+            /* border: 2px solid white; */
+            justify-content: center;
+            align-items: center;
+        }
+
+        #box {
+            /* display: flex;*/
+            color: rgb(219, 209, 209);
+            border: none;
+            margin: 60px;
+            height: 300px;
+            width: 250px;
+            border-radius: 15px;
+            transition: ease-in-out;
+            transition-duration: 1s;
+            /* transform: skew(20deg); */
+            box-shadow: 6px 4px 10px #9dad63;
+        }
+        #box p{
+            text-align: center;
+        }
+        #box:hover {
+            /* transform: skew(0deg); */
+            box-shadow: -6px 4px 10px #9dad63;
+            /* transform: translateX(40px); */
+            transform: scale(1.3);
+            border: 1px solid grey;
+        }
+
+        #box h3 {
+            margin-left: 90px;
+            flex-shrink: 100px;
+        }
+
+        .button {
+            cursor: pointer;
+            font-weight: bold;
+            border: none;
+            border-radius: 15px;
+            height: 30px;
+            display: block;
+            margin: auto;
+            margin-top: 35px;
+            background-color: #9dad63;
+            transition: ease-in-out;
+            transition-duration: 2s;
+        }
+
+        .button:hover {
+            background-color: rgb(204, 133, 133);
+            box-shadow: 3px 2px 8px rgb(151, 55, 79);
+            /* transform:rotateY(360deg); */
+            transform: scale(1.5);
+        }
+
+        @media (max-width: 1115px) {
+            .button:hover {
+                background-color: rgb(204, 133, 133);
+                box-shadow: 3px 2px 8px rgb(151, 55, 79);
+                transform: rotateY(360deg);
+            }
+
+            #box:hover {
+                box-shadow: -6px 4px 10px #9dad63;
+                transform: translateX(40px);
+                border: 1px solid grey;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="box">
+            <h3>Services</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae molestiae itaque accusantium, alias
+                suscipit hic optio dolor vero quaerat repellendus atque tenetur tempora obcaecati praesentium doloremque
+                excepturi autem aliquam aspernatur?</p>
+            <input type="button" class="button" value="Read More..">
+        </div>
+        <div id="box">
+            <h3>About</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae molestiae itaque accusantium, alias
+                suscipit hic optio dolor vero quaerat repellendus atque tenetur tempora obcaecati praesentium doloremque
+                excepturi autem aliquam aspernatur?</p>
+            <input type="button" class="button" value="Read More..">
+        </div>
+        <div id="box">
+            <h3>Contact</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae molestiae itaque accusantium, alias
+                suscipit hic optio dolor vero quaerat repellendus atque tenetur tempora obcaecati praesentium doloremque
+                excepturi autem aliquam aspernatur?</p>
+            <input type="button" class="button" value="Read More..">
+        </div>
+    </div>
+</body>
+
+</html>
